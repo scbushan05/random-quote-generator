@@ -14,11 +14,11 @@ const populateInUI = (quote) => {
     const quoteDiv = document.querySelector('#quote');
     const authorDiv = document.querySelector('#author');
     const footer = document.querySelector('.card-footer');
-    
+    footer.textContent = '';
     quoteDiv.textContent = quote.content;
     authorDiv.textContent = " - "+quote.author;
+    
     quote.tags.forEach(tag => {
-        footer.textContent = '';
         const tagDiv = document.createElement('div');
         tagDiv.classList.add("badge");
         tagDiv.classList.add("badge-pill");
